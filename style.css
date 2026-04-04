@@ -46,3 +46,83 @@ body {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+/* Hero Section Styling */
+.hero-section {
+    background-color: #0b1118; /* ပုံထဲကလို အမည်းရောင်ရင့်ရင့် */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    color: white;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    max-width: 500px;
+    margin: 15px 0;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #00adef;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.hero-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    height: 4px;
+    width: 30px;
+    background-color: #555;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.dot.active { background-color: #ff6600; }
+
+/* Promo Banners Styling */
+.promo-section {
+    display: flex;
+    gap: 20px;
+    padding: 40px 5%;
+    justify-content: space-between;
+}
+
+.promo-card {
+    flex: 1;
+    height: 200px;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* တစ်ခုချင်းစီအတွက် နောက်ခံအရောင် */
+.headphone { background-color: #000; }
+.deals { background-color: #7ab52b; }
+.tablet { background-color: #9e8bbd; }
+
+.promo-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.price-tag {
+    background: #ff9d00;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
