@@ -93,19 +93,22 @@ body {
 
 /* Promo Banners Styling */
 .promo-section {
-    display: flex;
+    display: flex; /* ဒါက အရေးကြီးဆုံးပါ */
+    flex-wrap: wrap; /* Screen သေးရင် အောက်ဆင်းသွားအောင် */
     gap: 20px;
     padding: 40px 5%;
-    justify-content: space-between;
 }
 
 .promo-card {
     flex: 1;
-    height: 200px;
-    border-radius: 5px;
+    min-width: 300px; /* Card တစ်ခုရဲ့ အနည်းဆုံး အကျယ် */
+    height: 250px;
+    border-radius: 10px;
     padding: 20px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end; /* စာသားတွေကို ကတ်ရဲ့ အောက်ခြေမှာ ထားဖို့ */
+    color: white;
 }
 
 /* တစ်ခုချင်းစီအတွက် နောက်ခံအရောင် */
