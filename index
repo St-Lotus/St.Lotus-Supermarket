@@ -1,0 +1,22 @@
+<div class="banner-container">
+    <div class="banner-card headphone">
+        <div class="content">
+            <h3>HEADPHONE & ACCESSORIES</h3>
+            <span class="price">$250.00</span>
+        </div>
+    </div>
+
+    <div class="banner-card deals">
+        <div class="content">
+            <p>LOVE & DEALS</p>
+            <h3>UP TO 70% OFF</h3>
+        </div>
+    </div>
+
+    <div class="banner-card tablet">
+        <div class="content">
+            <h3>TABLET & ACCESSORIES</h3>
+            <span class="price">$250.00</span>
+        </div>
+    </div>
+</div>
