@@ -1,3 +1,25 @@
+/* Google Fonts ကနေ Myanmar Font ယူခြင်း */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Font ကို Noto Sans Myanmar ပြောင်းလိုက်ပါပြီ */
+    font-family: 'Noto Sans Myanmar', 'Poppins', sans-serif;
+}
+
+/* မြန်မာစာသားတွေက အင်္ဂလိပ်စာထက် နည်းနည်းပိုကြီးတတ်လို့ Font size ညှိခြင်း */
+body {
+    line-height: 1.6;
+}
+
+.logo {
+    font-weight: 700;
+    /* City Mall ပုံထဲကလို အရောင်စပ်ချင်ရင် */
+    color: #007bff; 
+}
+
 /* အခြေခံ Setting များ */
 * {
     margin: 0;
@@ -42,9 +64,15 @@ body {
 }
 
 .search-box input {
-    padding: 8px 15px;
+    padding: 10px 20px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 25px; /* Search bar ကို အဝိုင်းပုံစံလုပ်ခြင်း */
+    width: 300px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #ff6600;
 }
 /* Hero Section Styling */
 .hero-section {
