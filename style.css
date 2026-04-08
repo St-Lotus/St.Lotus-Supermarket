@@ -116,17 +116,25 @@ body {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex; /* အစက်တွေ တစ်တန်းတည်းဖြစ်အောင် */
+    gap: 10px;
+    z-index: 10;
 }
 
 .dot {
-    height: 4px;
-    width: 30px;
-    background-color: #555;
-    display: inline-block;
-    margin: 0 5px;
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.dot.active { background-color: #ff6600; }
+.dot.active {
+    background-color: #ff6600; /* Active ဖြစ်တဲ့ အစက်အရောင် */
+    width: 30px; /* ပုံထဲကလို Active ဖြစ်ရင် အချောင်းလေး ဖြစ်သွားအောင် */
+    border-radius: 10px;
+}
 
 /* Promo Banners Styling */
 .promo-section {
