@@ -568,3 +568,30 @@ footer {
     width: 30px;
     height: 30px;
 }
+
+/* Mobile အတွက်သာ */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%; /* အပြင်မှာ ဖျောက်ထားမယ် */
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        padding-top: 80px;
+        transition: 0.4s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0; /* ပေါ်လာအောင် လုပ်မယ် */
+    }
+}
