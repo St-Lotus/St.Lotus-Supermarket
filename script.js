@@ -51,3 +51,7 @@ setInterval(() => {
     currentIdx = (currentIdx + 1) % slides.length;
     showSlide(currentIdx);
 }, 5000);
+
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
