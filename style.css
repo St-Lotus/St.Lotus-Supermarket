@@ -436,6 +436,32 @@ footer {
     border-radius: 50%;
 }
 
+/* Screen အကျယ် 768px ထက် ငယ်သော ဖုန်း/Tablet များအတွက် */
+@media (max-width: 768px) {
+    .slider-container {
+        height: 350px; /* ဖုန်းမှာ Slider ကို နည်းနည်း သေးလိုက်မယ် */
+    }
+
+    .hero-content {
+        padding: 0 20px;
+        text-align: center; /* ဖုန်းမှာ စာသားကို အလယ်ပို့မယ် */
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem !important; /* စာလုံးအရွယ်အစားကို ဖုန်းနဲ့တော်အောင် လျှော့မယ် */
+        line-height: 1.4;
+    }
+
+    .sub-title {
+        font-size: 0.9rem !important;
+    }
+
+    .shop-now-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
+
 .prev-btn { left: 20px; }
 .next-btn { right: 20px; }
 
