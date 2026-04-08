@@ -55,3 +55,19 @@ setInterval(() => {
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
 }
+
+let mybutton = document.getElementById("backToTop");
+
+// User က အောက်ကို ၂၀px ဆွဲလိုက်တာနဲ့ ခလုတ်ပေါ်လာမယ်
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+};
+
+// ခလုတ်နှိပ်ရင် အပေါ်ဆုံးကို ပို့ပေးမယ်
+mybutton.onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+};
