@@ -595,3 +595,29 @@ footer {
         right: 0; /* ပေါ်လာအောင် လုပ်မယ် */
     }
 }
+
+#backToTop {
+    display: none; /* အစမှာ ဖျောက်ထားမယ် */
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* ညာဘက်မှာ Contact တွေ ရှိလို့ ဘယ်ဘက်မှာ ထားပါမယ် */
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #ff6600;
+}
+
+/* တစ်ခါတည်း Smooth Scroll ဖြစ်အောင် လုပ်ပါမယ် */
+html {
+    scroll-behavior: smooth;
+}
