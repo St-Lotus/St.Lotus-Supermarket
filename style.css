@@ -225,6 +225,47 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
 }
+
+/* Top Bar Styling */
+.top-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    padding: 8px 5%;
+    font-size: 13px;
+    color: #666;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.lang-switch {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Logo ကို City Mall အရောင်စပ်ကြည့်ခြင်း */
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
 footer {
     background-color: #fff;
     border-top: 1px solid #eee;
@@ -296,4 +337,27 @@ footer {
     border-top: 1px solid #f0f0f0;
     color: #999;
     font-size: 0.8rem;
+}
+
+/* Screen အကျယ် 768px ထက် ငယ်သွားရင် (ဖုန်းတွေမှာ) */
+@media (max-width: 768px) {
+    .navbar, .promo-section, .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-box input {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
 }
