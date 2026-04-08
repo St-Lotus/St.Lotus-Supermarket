@@ -466,3 +466,71 @@ footer {
 .next-btn { right: 20px; }
 
 .prev-btn:hover, .next-btn:hover { background: #ff6600; }
+
+.categories-section {
+    padding: 40px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.categories-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* ဖုန်းမှာဆိုရင် အောက်တန်းဆင်းသွားဖို့ */
+    margin-top: 20px;
+}
+
+.category-item {
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 120px;
+}
+
+.category-item:hover {
+    transform: translateY(-10px); /* Mouse ထောက်ရင် အပေါ်နည်းနည်းကြွတက်မယ် */
+}
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #f8f9fa;
+    border-radius: 50%; /* ဝိုင်းဝိုင်းလေးဖြစ်အောင် */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.category-item:hover .category-icon {
+    border-color: #ff6600;
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.2);
+}
+
+.category-icon img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.category-item p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .categories-grid {
+        gap: 15px;
+    }
+    .category-icon {
+        width: 65px;
+        height: 65px;
+    }
+    .category-icon img {
+        width: 35px;
+    }
+}
