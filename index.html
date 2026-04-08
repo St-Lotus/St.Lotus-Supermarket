@@ -41,19 +41,33 @@
             </div>
         </nav>
     </header>
-        <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1510557880182-3d4d3cba3f21?q=80&w=1470&auto=format&fit=crop'); background-size: cover; background-position: center;">
-        <div class="hero-content">
-            <p class="sub-title" style="color: #ff6600; font-weight: bold;">အခုပဲ လာရောက်ဝယ်ယူနိုင်ပါပြီ။</p>
-            <h1>သင်နှစ်သက်သမျှ အရာအားလုံးကို တစ်နေရာတည်းမှာ ရရှိနိုင်ဖို့။</h1>
-            <a href="#" class="shop-now-btn">အခုပဲ ဝယ်ယူရန်</a>
-        </div>
-        <div class="hero-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </section>
+        <section class="slider-container">
+            <div class="slider">
+                <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000');">
+                    <div class="hero-content">
+                    <p class="sub-title">အခုပဲ ဝယ်ယူနိုင်ပါပြီ</p>
+                    <h1>လတ်ဆတ်သော သစ်သီးဝလံများကို တစ်နေရာတည်းမှာ ရရှိနိုင်ဖို့</h1>
+                    <a href="#" class="shop-now-btn">အခုပဲ ဝယ်ယူရန်</a>
+                </div>
+            </div>
 
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1528952686551-542043782ab9?q=80&w=1000');">
+                <div class="hero-content">
+                    <p class="sub-title">အထူးလျှော့စျေး</p>
+                    <h1>အီလက်ထရောနစ် ပစ္စည်းများကို ၃၀% အထိ လျှော့စျေးပေးနေပြီ</h1>
+                    <a href="#" class="shop-now-btn">အသေးစိတ်ကြည့်ရန်</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="prev-btn">❮</button>
+        <button class="next-btn">❯</button>
+
+        <div class="hero-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+        </div>
+    </section>    
     <div class="section-header">
         <h2>အရောင်းရဆုံး ပစ္စည်းများ</h2>
         <a href="#" class="view-all">အားလုံးကြည့်ရန် ></a>
