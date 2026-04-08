@@ -535,3 +535,36 @@ footer {
         width: 35px;
     }
 }
+
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999; /* အားလုံးရဲ့ အပေါ်မှာ ရှိနေအောင် */
+}
+
+.contact-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1); /* Mouse ထောက်ရင် နည်းနည်း ကြီးလာမယ် */
+}
+
+.messenger { background-color: #0084ff; }
+.phone { background-color: #4caf50; }
+
+.contact-btn img {
+    width: 30px;
+    height: 30px;
+}
