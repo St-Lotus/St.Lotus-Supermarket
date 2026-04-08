@@ -94,6 +94,12 @@ body {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* စာသားနောက်မှာ အရိပ်ထည့်တာပါ */
 }
 
+.hero-content {
+    position: relative;
+    z-index: 2; /* စာသားကို Overlay ရဲ့ အပေါ်တင်တာပါ */
+    max-width: 800px;
+}
+
 .sub-title {
     font-size: 1.2rem;
     color: #ffde59; /* Sub-title ကို အဝါဖျော့လေးပြောင်းရင် ပိုပေါ်ပါတယ် */
@@ -378,11 +384,11 @@ footer {
         font-size: 1.5rem;
     }
 }
-
+/* Slider container ကို အချိုးကျဖြစ်အောင် height ကို ညှိပါမယ် */
 .slider-container {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 500px; /* ကွန်ပျူတာအတွက် အမြင့် */
     overflow: hidden;
 }
 
@@ -395,9 +401,21 @@ footer {
     display: flex;
     align-items: center;
     padding: 0 10%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    background-size: cover;
-    background-position: center;
+    
+    /* ပုံကို Screen ထဲမှာ ကွက်တိဖြစ်အောင် လုပ်တဲ့ အရေးကြီးဆုံးအပိုင်း */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+/* စာသားတွေ ပုံပေါ်မှာ ပိုပေါ်လွင်အောင် Overlay ပါးပါးအုပ်မယ် */
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* အမည်းရောင် ၄၀% အုပ်တာပါ */
+    z-index: 1;
 }
 
 .slide.active {
