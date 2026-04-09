@@ -622,23 +622,39 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ကုမ္ပဏီလိုဂိုအတွက် */
+/* လိုဂိုနှစ်ခုလုံးကို ထိန်းချုပ်မယ့် Container */
+.brand-container {
+    display: flex;
+    align-items: center; /* အမြင့်ကို အလယ်ညှိမယ် */
+    gap: 15px; /* လိုဂိုနှစ်ခုကြား အကွာအဝေး */
+}
+
+/* လိုဂိုကြားက မျဉ်းတိုလေး (City Mall လိုမျိုးခွဲချင်ရင်) */
+.logo-divider {
+    width: 2px;
+    height: 30px;
+    background-color: #ddd;
+}
+
+/* လိုဂိုပုံစံများကို စနစ်တကျ အရွယ်အစားသတ်မှတ်ခြင်း */
 .company-logo img {
-    height: 40px; /* အရွယ်အစားကို စိတ်ကြိုက်ညှိနိုင်ပါတယ် */
+    height: 45px; /* အမြင့်ကို ကန့်သတ်လိုက်ပါ (ဒါမှ မကြီးတော့မှာပါ) */
     width: auto;
     object-fit: contain;
 }
 
-/* ဆိုင်လိုဂိုအတွက် */
 .shop-logo img {
-    height: 50px; /* ဆိုင်လိုဂိုကို နည်းနည်းပိုကြီးထားလို့ရပါတယ် */
+    height: 55px; /* ဆိုင်လိုဂိုကို နည်းနည်း ပိုကြီးထားနိုင်ပါတယ် */
     width: auto;
     object-fit: contain;
 }
 
-/* ဖုန်းနဲ့ကြည့်ရင် လိုဂိုအရွယ်အစား သေးပေးဖို့ */
+/* ဖုန်းမှာဆိုရင် လိုဂိုတွေကို ပိုသေးလိုက်မယ် */
 @media (max-width: 768px) {
-    .shop-logo img {
-        height: 35px;
+    .brand-container {
+        gap: 10px;
     }
+    .company-logo img { height: 30px; }
+    .shop-logo img { height: 40px; }
+    .logo-divider { height: 20px; }
 }
