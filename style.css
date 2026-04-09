@@ -621,3 +621,24 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+/* ကုမ္ပဏီလိုဂိုအတွက် */
+.company-logo img {
+    height: 40px; /* အရွယ်အစားကို စိတ်ကြိုက်ညှိနိုင်ပါတယ် */
+    width: auto;
+    object-fit: contain;
+}
+
+/* ဆိုင်လိုဂိုအတွက် */
+.shop-logo img {
+    height: 50px; /* ဆိုင်လိုဂိုကို နည်းနည်းပိုကြီးထားလို့ရပါတယ် */
+    width: auto;
+    object-fit: contain;
+}
+
+/* ဖုန်းနဲ့ကြည့်ရင် လိုဂိုအရွယ်အစား သေးပေးဖို့ */
+@media (max-width: 768px) {
+    .shop-logo img {
+        height: 35px;
+    }
+}
