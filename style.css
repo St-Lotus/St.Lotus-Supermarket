@@ -101,6 +101,11 @@ body {
     max-width: 800px;
 }
 
+.hero-content h1, .hero-content p {
+    /* စာသားတွေရဲ့ နောက်မှာ အရိပ်ပါးပါးလေး ထည့်ပြီး ပိုပေါ်လွင်စေခြင်း */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
 .sub-title {
     font-size: 1.2rem;
     color: #ffde59; /* Sub-title ကို အဝါဖျော့လေးပြောင်းရင် ပိုပေါ်ပါတယ် */
@@ -409,13 +414,18 @@ footer {
     background-repeat: no-repeat;
 }
 
-/* စာသားတွေ ပုံပေါ်မှာ ပိုပေါ်လွင်အောင် Overlay ပါးပါးအုပ်မယ် */
+/* Slider ပုံပေါ်က Overlay ကို လင်းစေရန် */
 .slide::before {
     content: "";
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* အမည်းရောင် ၄၀% အုပ်တာပါ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* အမည်းရောင် Overlay ကို ၄၀% (0.4) အစား ၂၀% (0.2) ပဲ ထားပါမယ် */
+    background: rgba(0, 0, 0, 0.2) !important; 
+    
     z-index: 1;
 }
 
