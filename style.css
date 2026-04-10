@@ -5,8 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Font ကို Noto Sans Myanmar ပြောင်းလိုက်ပါပြီ */
-    font-family: 'Noto Sans Myanmar', 'Poppins', sans-serif;
+    /* Pyidaungsu သို့မဟုတ် Noto Sans Myanmar ကို သုံးပေးပါ */
+    font-family: 'Pyidaungsu', 'Noto Sans Myanmar', sans-serif;
 }
 
 /* မြန်မာစာသားတွေက အင်္ဂလိပ်စာထက် နည်းနည်းပိုကြီးတတ်လို့ Font size ညှိခြင်း */
