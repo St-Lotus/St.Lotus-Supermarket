@@ -493,14 +493,15 @@ footer {
     margin-top: 20px;
 }
 
+/* Category item က link ဖြစ်သွားပေမယ့် စာသားအရောင်ကို မပြောင်းစေချင်ရင် */
 .category-item {
-    cursor: pointer;
-    transition: transform 0.3s;
-    width: 120px;
+    text-decoration: none; /* စာသားအောက်က မျဉ်းတားတာကို ဖျောက်တာပါ */
+    display: block;
+    color: inherit; /* နဂိုအရောင်အတိုင်းပဲ ထားမယ် */
 }
 
 .category-item:hover {
-    transform: translateY(-10px); /* Mouse ထောက်ရင် အပေါ်နည်းနည်းကြွတက်မယ် */
+    color: #ff6600; /* Mouse ထောက်ရင်တော့ အရောင်လေး ပြောင်းချင်ပြောင်းလို့ရပါတယ် */
 }
 
 .category-icon {
