@@ -535,6 +535,19 @@ footer {
     justify-content: center;
 }
 
+/* Link ကြောင့် စာသားအရောင်မပြောင်းစေရန် */
+.category-link {
+    text-decoration: none; /* မျဉ်းတားတာ ဖျောက်မယ် */
+    color: inherit; /* နဂိုစာသားအရောင် (အမည်း) အတိုင်းထားမယ် */
+    display: block; /* တစ်ခုလုံး နှိပ်လို့ရအောင် လုပ်မယ် */
+}
+
+.category-link:hover {
+    /* Mouse ထောက်ရင် နည်းနည်း ကြွတက်စေချင်ရင် */
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
 /* Mobile Responsive */
 @media (max-width: 480px) {
     .categories-grid {
