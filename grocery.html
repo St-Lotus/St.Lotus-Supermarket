@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My SuperMarket Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="contact-info">
+                    <span>📞 ၀၉-၄၀၄၇၇၆၄၀၅</span>
+                </div>
+                <div class="user-menu">
+                    <span class="lang-switch">🇲🇲 MY ▾</span>
+                    <a href="#">ဝင်ရောက်ပါ / စာရင်းသွင်းပါ</a>
+                    <span class="cart-icon">🛒</span>
+                </div>
+            </div>
+        </div>
+
+    <nav class="navbar">
+        <div class="logo"><span style="color: #ed1c24;"><img src="images/cishtoo.png" alt="CISHTOO"></div>
+        </nav>
+    <nav class="navbar">
+        <div class="brand-container">
+            <div class="company-logo">
+                <img src="images/cis2.png" alt="CISHTOO">
+            </div>
+        <div class="logo-divider"></div>
+            <div class="shop-logo">
+                <img src="images/ST.Lotus.png" alt="ST.LOTUS">
+            </div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">ပင်မစာမျက်နှာ</a></li>
+            <li><a href="#">ပစ္စည်းအမျိုးအစားများ</a></li>
+            <li><a href="#">အရောင်းရဆုံး</a></li>
+            <li><a href="#">ဆိုင်များ</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search product...">
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+    
+    </header>
+        <section class="categories-section">
+            <div class="section-header">
+                <h2>အမျိုးအစားအလိုက် ရှာဖွေရန်</h2>
+            </div>
+    	  <a href="grocery.html" class="category-item">
+    		    <div class="category-icon">
+        		    <img src="images/grocery-icon.png" alt="Grocery">
+    		    </div>
+    		    <p>ကုန်စုံနှင့်လူသုံးကုန်</p>
+	      </a>
+
+        <a href="electronics.html" class="category-item">
+            <div class="category-icon">
+                <img src="images/electronics-icon.png" alt="Electronics">
+            </div>
+            <p>လျှပ်စစ်ပစ္စည်း</p>
+        </a>
+    </section>
+    
+    <section class="promo-section">
+        <div class="promo-card headphone" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=500&auto=format&fit=crop'); background-size: cover;">
+            <div class="promo-text">
+                <h3>HEADPHONE & ACCESSORIES</h3>
+                <span class="price-tag">$250.00</span>
+            </div>
+        </div>
+        
+        <div class="promo-card deals" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/20260313-161351-1.jpg'); background-size: cover;">
+            <div class="promo-text">
+                <p>MARCH 11 TO APRIL 20</p>
+                <h3>သကြန်အထူးဈေးရောင်းပွဲတော်</h3>
+            </div>
+        </div>
+
+        <div class="promo-card tablet" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?q=80&w=500&auto=format&fit=crop'); background-size: cover;">
+            <div class="promo-text">
+                <h3>TABLET & ACCESSORIES</h3>
+                <span class="price-tag">$250.00</span>
+            </div>
+        </div>
+
+    <section class="product-section">
+        <div class="section-header">
+            <h2>အရောင်းရဆုံး ပစ္စည်းများ</h2>
+            <a href="#" class="view-all">အားလုံးကြည့်ရန် ></a>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1522906456132-bf223ed63945?q=80&w=300&auto=format&fit=crop" alt="Peach">
+                </div>
+                <div class="product-info">
+                    <p class="category">လတ်ဆတ်သောသစ်သီးများ</p>
+                    <h4>Fresh Organic Peaches</h4>
+                    <p class="price">$5.00 / kg</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=300&auto=format&fit=crop" alt="Smart Watch">
+                </div>
+                <div class="product-info">
+                    <p class="category">အီလက်ထရောနစ်ပစ္စည်းများ</p>
+                    <h4>Apple Watch Series 3</h4>
+                    <p class="price">$249.00</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=300&auto=format&fit=crop" alt="TV">
+                </div>
+                <div class="product-info">
+                    <p class="category">မီးဖိုချောင်နှင့်အိမ်သုံးပစ္စည်းများ</p>
+                    <h4>Samsung 4K Curved TV</h4>
+                    <p class="price">$599.00</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=300&auto=format&fit=crop" alt="Headphone">
+                </div>
+                <div class="product-info">
+                    <p class="category">ဆက်စပ်ပစ္စည်းများ</p>
+                    <h4>Wireless Headphones</h4>
+                    <p class="price">$89.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>သတင်းအချက်အလက်များ</h3>
+                <ul>
+                    <li><a href="#">ကျွနုပ်တို့အကြောင်း</a></li>
+                    <li><li><a href="#">မေးလေ့ရှိသော မေးခွန်းများ</a></li>
+                    <li><a href="#">စည်းမျဉ်းစည်းကမ်းများ</a></li>
+                    <li><a href="#">ဝန်ဆောင်မှု</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>ကျွနုပ်အကောင့်</h3>
+                <ul>
+                    <li><a href="#">ကျွနုပ်အကြောင်း</a></li>
+                    <li><a href="#">အော်ဒါမှတ်တမ်း</a></li>
+                    <li><a href="#">စိတ်ကြိုက်စာရင်း</a></li>
+                    <li><a href="#">အော်ဒါ စစ်ဆေးရန်</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>ပစ္စည်းအမျိုးအစားများ</h3>
+                <ul>
+                    <li><a href="#">အီလက်ထရောနစ်ပစ္စည်းများ</a></li>
+                    <li><a href="#">စားသောက်ကုန်များ</a></li>
+                    <li><a href="#">မီးဖိုချောင်နှင့်အိမ်သုံးပစ္စည်းများ</a></li>
+                    <li><a href="#">ဆက်စပ်ပစ္စည်းများ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>ဆက်သွယ်ရန်</h3>
+                <p class="contact-text">📍 အမှတ်(၁၉၇)၊ ရေထွက်ဦးလမ်း၊ ကန်ရှေ့ရပ်၊ တောင်ကြီးမြို့</p>
+                <p class="contact-text">📞 (+959) 767755710</p>
+                <p class="contact-text">📞 (+959) 404776405</p>
+                <p class="contact-text">📧 stlotusittgi@gmail.com</p>
+                <div class="payment-methods">
+                    <p>DOWNLOAD APP:</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" width="100">
+                </div>
+            </div>
+        </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2024 SuperMarket Store. All Rights Reserved.</p>
+            </div>
+        </footer>
+    <button id="backToTop" title="Go to top">↑</button>
+        
+    <script src="script.js"></script>
+        <div class="floating-contact">
+            <a href="https://m.me/yourpage" target="_blank" class="contact-btn messenger">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968771.png" alt="Messenger">
+            </a>
+    
+            <a href="tel:09123456789" class="contact-btn phone">
+                <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone">
+            </a>
+        </div>
+    </body>
+</html>
