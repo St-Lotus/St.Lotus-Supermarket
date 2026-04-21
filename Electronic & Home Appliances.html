@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My SuperMarket Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="contact-info">
+                    <span>📞 ၀၉-၄၀၄၇၇၆၄၀၅</span>
+                </div>
+                <div class="user-menu">
+                    <span class="lang-switch">🇲🇲 MY ▾</span>
+                    <a href="#">ဝင်ရောက်ပါ / စာရင်းသွင်းပါ</a>
+                    <span class="cart-icon">🛒</span>
+                </div>
+            </div>
+        </div>
+
+    <nav class="navbar">
+        <div class="logo"><span style="color: #ed1c24;"><img src="images/cishtoo.png" alt="CISHTOO"></div>
+        </nav>
+    <nav class="navbar">
+        <div class="brand-container">
+            <div class="company-logo">
+                <img src="images/cis2.png" alt="CISHTOO">
+            </div>
+        <div class="logo-divider"></div>
+            <div class="shop-logo">
+                <img src="images/ST.Lotus.png" alt="ST.LOTUS">
+            </div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">ပင်မစာမျက်နှာ</a></li>
+            <li><a href="#">ပစ္စည်းအမျိုးအစားများ</a></li>
+            <li><a href="#">အရောင်းရဆုံး</a></li>
+            <li><a href="#">ဆိုင်များ</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search product...">
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+    
+    <section class="category-page-container">
+    <div class="section-header">
+        <h1>လျှပ်စစ်နှင့် အိမ်သုံး လျှပ်စစ်ပစ္စည်းများ</h1>
+        <p>အရည်အသွေးမြင့် အာမခံအပြည့်အဝပါသော ပစ္စည်းများကို ရွေးချယ်ဝယ်ယူနိုင်ပါသည်</p>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/daawat.jpg" alt="Rice">
+                <span class="discount-tag">-10%</span>
+            </div>
+            <div class="product-info">
+                <h3>Daawat Basmati Rice 1Kg</h3>
+                <p class="price">၁၆,၆၀၀ ကျပ်</p>
+                <button class="add-to-cart">ခြင်းထဲထည့်မည်</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/kbz.jpg" alt="Rice">
+            </div>
+            <div class="product-info">
+                <h3>Kanbawza Basmati Rice 2Kg</h3>
+                <p class="price">၂၈,၈၀၀ ကျပ်</p>
+                <button class="add-to-cart">ခြင်းထဲထည့်မည်</button>
+            </div>
+        </div>
+
+		<div class="product-card">
+            <div class="product-image">
+                <img src="images/goody.png" alt="Rice">
+            </div>
+            <div class="product-info">
+                <h3>Goody Shwe Bo Paw San Hmwe 5Kg</h3>
+                <p class="price">၁၈,၈၀၀ ကျပ်</p>
+                <button class="add-to-cart">ခြင်းထဲထည့်မည်</button>
+            </div>
+        </div>
+
+		<div class="product-card">
+            <div class="product-image">
+                <img src="images/cmhl.jpg" alt="Rice">
+            </div>
+            <div class="product-info">
+                <h3>Nay Thurein Paw San Hmwe Rice 12Kg</h3>
+                <p class="price">၆၇,၈၀၀ ကျပ်</p>
+                <button class="add-to-cart">ခြင်းထဲထည့်မည်</button>
+            </div>
+        </div>
+
+        </div>
+</section>
+		
+		<footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>သတင်းအချက်အလက်များ</h3>
+                <ul>
+                    <li><a href="#">ကျွနုပ်တို့အကြောင်း</a></li>
+                    <li><li><a href="#">မေးလေ့ရှိသော မေးခွန်းများ</a></li>
+                    <li><a href="#">စည်းမျဉ်းစည်းကမ်းများ</a></li>
+                    <li><a href="#">ဝန်ဆောင်မှု</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>ကျွနုပ်အကောင့်</h3>
+                <ul>
+                    <li><a href="#">ကျွနုပ်အကြောင်း</a></li>
+                    <li><a href="#">အော်ဒါမှတ်တမ်း</a></li>
+                    <li><a href="#">စိတ်ကြိုက်စာရင်း</a></li>
+                    <li><a href="#">အော်ဒါ စစ်ဆေးရန်</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>ပစ္စည်းအမျိုးအစားများ</h3>
+                <ul>
+                    <li><a href="#">အီလက်ထရောနစ်ပစ္စည်းများ</a></li>
+                    <li><a href="#">စားသောက်ကုန်များ</a></li>
+                    <li><a href="#">မီးဖိုချောင်နှင့်အိမ်သုံးပစ္စည်းများ</a></li>
+                    <li><a href="#">ဆက်စပ်ပစ္စည်းများ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>ဆက်သွယ်ရန်</h3>
+                <p class="contact-text">📍 အမှတ်(၁၉၇)၊ ရေထွက်ဦးလမ်း၊ ကန်ရှေ့ရပ်၊ တောင်ကြီးမြို့</p>
+                <p class="contact-text">📞 (+959) 767755710</p>
+                <p class="contact-text">📞 (+959) 404776405</p>
+                <p class="contact-text">📧 stlotusittgi@gmail.com</p>
+                <div class="payment-methods">
+                    <p>DOWNLOAD APP:</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" width="100">
+                </div>
+            </div>
+        </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2024 SuperMarket Store. All Rights Reserved.</p>
+            </div>
+        </footer>
+    <button id="backToTop" title="Go to top">↑</button>
+        
+    <script src="script.js"></script>
+        <div class="floating-contact">
+            <a href="https://m.me/yourpage" target="_blank" class="contact-btn messenger">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968771.png" alt="Messenger">
+            </a>
+    
+            <a href="tel:09123456789" class="contact-btn phone">
+                <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone">
+            </a>
+        </div>
+    </body>
+</html>
