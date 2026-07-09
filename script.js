@@ -72,36 +72,33 @@ mybutton.onclick = function() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 };
 
-// သင့် Google Sheet ရဲ့ ID ကို ဒီနေရာမှာ အစားထိုးပါ
-const SHEET_ID = '1z91vQGTeCvj6iYYZP4i9ANBn7x0dd54tb9tFgthisxc'; 
-const SHEET_TITLE = 'Sheet1'; // Sheet အောက်ခြေက နာမည် (ပုံမှန် Sheet1 ပါ)
-const SHEET_URL = `https://docs.google.com/spreadsheets/d/1z91vQGTeCvj6iYYZP4i9ANBn7x0dd54tb9tFgthisxc/edit?usp=sharing`;
-
-// ၎င်း Function သည် Google Sheet ထဲက အချက်အလက်များကို ဆွဲယူပေးမည်
 async function fetchGroceryProducts() {
     const gridContainer = document.getElementById('grocery-grid');
-    if (!gridContainer) return; // အကယ်၍ ၎င်း Page တွင် Grid မရှိပါက ရပ်မည်
+    
+    // 💡 အရေးကြီးဆုံးအချက်: ဒီ ID မရှိရင် အောက်ကကုဒ်တွေကို ဆက်အလုပ်မလုပ်ခိုင်းဘဲ ဒီတင်ရပ်ပစ်ပါ
+    if (!gridContainer) return; 
+
+    // သင့် Google Sheet ID ကို ဤနေရာတွင် သေချာထည့်ပါ
+    const SHEET_ID = '1z91vQGTeCvj6iYYZP4i9ANBn7x0dd54tb9tFgthisxc'; 
+    const SHEET_TITLE = 'Sheet1'; 
+    const SHEET_URL = `https://docs.google.com/spreadsheets/d/1z91vQGTeCvj6iYYZP4i9ANBn7x0dd54tb9tFgthisxc/edit?usp=sharing`;
 
     try {
         const response = await fetch(SHEET_URL);
         const data = await response.text();
         
-        // CSV Data ကို စာကြောင်းအလိုက် ခွဲထုတ်ခြင်း
-        const rows = data.split('\n').slice(1); // ခေါင်းစဉ်တန်းကို ဖယ်ထုတ်သည်
-        
-        gridContainer.innerHTML = ''; // အစောပိုင်း Loading စာသားကို ရှင်းထုတ်သည်
+        const rows = data.split('\n').slice(1); 
+        gridContainer.innerHTML = ''; 
 
         rows.forEach(row => {
-            // ကော်မာ (,) များအလိုက် ခွဲထုတ်ပြီး အကွက်ထဲက စာသားများကို သန့်စင်ခြင်း
             const columns = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-            if (columns.length < 4) return; // အချက်အလက် မပြည့်စုံလျှင် ကျော်မည်
+            if (columns.length < 4) return; 
 
             const id = columns[0].replace(/"/g, '').trim();
             const title = columns[1].replace(/"/g, '').trim();
             const price = columns[2].replace(/"/g, '').trim();
             const image = columns[3].replace(/"/g, '').trim();
 
-            // HTML Product Card ကို အလိုအလျောက် တည်ဆောက်ခြင်း
             const productCard = `
                 <div class="product-card">
                     <div class="product-image">
@@ -122,5 +119,5 @@ async function fetchGroceryProducts() {
     }
 }
 
-// Page ပွင့်လာတာနဲ့ ၎င်း Function ကို စတင်အလုပ်လုပ်ခိုင်းမည်
+// ၎င်း Event Listener ကိုလည်း အောက်ဆုံးမှာ သီးသန့်ထားပေးပါ
 document.addEventListener('DOMContentLoaded', fetchGroceryProducts);
