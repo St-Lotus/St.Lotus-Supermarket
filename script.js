@@ -41,7 +41,7 @@ async function fetchGroceryProducts() {
     // ⚠️ သင့် Google Sheet ID ကို ဒီနေရာမှာ သေချာစွာ အစားထိုးပါ
     const SHEET_ID = '1z91vQGTeCvj6iYYZP4i9ANBn7x0dd54tb9tFgthisxc'; 
     const SHEET_TITLE = 'Sheet1'; 
-    const SHEET_URL = `https://docs.google.com/spreadsheets/d/1z91vQGTeCvj6iYYZP4i9ANBn7x0dd54tb9tFgthisxc/edit?usp=sharing`;
+    const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_TITLE}`;
 
     try {
         const response = await fetch(SHEET_URL);
