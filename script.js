@@ -48,7 +48,6 @@ async function fetchGroceryProducts() {
         const data = await response.text();
         if (!response.ok) throw new Error('Network response was not ok');
         
-        const data = await response.text();
         const rows = data.split('\n').slice(1); 
         
         gridContainer.innerHTML = ''; // အဟောင်းတွေကို ရှင်းထုတ်မယ်
