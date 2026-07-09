@@ -45,6 +45,7 @@ async function fetchGroceryProducts() {
 
     try {
         const response = await fetch(SHEET_URL);
+        const data = await response.text();
         if (!response.ok) throw new Error('Network response was not ok');
         
         const data = await response.text();
