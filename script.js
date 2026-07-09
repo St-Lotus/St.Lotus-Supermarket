@@ -35,22 +35,25 @@ if (mybutton) {
 async function fetchGroceryProducts() {
     const gridContainer = document.getElementById('grocery-grid');
     
-    // ဒီ ID မရှိရင် (ဥပမာ index.html ပေါ်မှာဆိုရင်) ဒီတင်ပဲ ရပ်မယ်၊ အမှားမပြစေရဘူး
+    // ဒီ ID မရှိရင် ဒီတင်ပဲ အလုပ်ရပ်မယ်
     if (!gridContainer) return; 
 
-    // ⚠️ သင့် Google Sheet ID ကို ဒီနေရာမှာ သေချာစွာ အစားထိုးပါ
     const SHEET_ID = '1z91vQGTeCvj6iYYZP4i9ANBn7x0dd54tb9tFgthisxc'; 
     const SHEET_TITLE = 'Sheet1'; 
     const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_TITLE}`;
 
     try {
         const response = await fetch(SHEET_URL);
-        const data = await response.text();
         if (!response.ok) throw new Error('Network response was not ok');
         
-        const rows = data.split('\n').slice(1); 
+        // 💡 ပြဿနာဖြစ်စေတဲ့ data နာမည်ကို sheetData လို့ ပြောင်းလဲလိုက်ပါတယ်
+        const sheetData = await response.text(); 
         
-        gridContainer.innerHTML = ''; // အဟောင်းတွေကို ရှင်းထုတ်မယ်
+        // Console မှာ ဒေတာတွေ မှန်မှန်ကန်ကန် ဝင်မဝင် စစ်ဆေးရန်
+        console.log("Google Sheet မှ ရလာသော ဒေတာများ:", sheetData);
+        
+        const rows = sheetData.split('\n').slice(1); 
+        gridContainer.innerHTML = ''; 
 
         rows.forEach(row => {
             const columns = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
@@ -80,6 +83,3 @@ async function fetchGroceryProducts() {
         gridContainer.innerHTML = '<p style="text-align:center; width:100%;">ပစ္စည်းများ တင်နေစဉ် အမှားအယွင်းရှိခဲ့ပါသည်။</p>';
     }
 }
-
-// Page အားလုံး ပွင့်လာတာနဲ့ Google Sheet ဖတ်ဖို့ အဆင်သင့်လုပ်ထားမယ်
-document.addEventListener('DOMContentLoaded', fetchGroceryProducts);
