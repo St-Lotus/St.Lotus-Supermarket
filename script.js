@@ -30,35 +30,28 @@ if (mybutton) {
 }
 
 // ==========================================
-// ၃။ Google Sheet မှ ပစ္စည်းများ ဆွဲယူမည့် နေရာ
+// ၃။ Google Sheet မှ ပစ္စည်းများ ဆွဲယူမည့် ဘုံ Function (General Function)
 // ==========================================
-async function fetchGroceryProducts() {
-    const gridContainer = document.getElementById('grocery-grid');
+async function fetchProductsFromSheet(gridId, sheetTitle) {
+    const gridContainer = document.getElementById(gridId);
+    
+    // အကယ်၍ ၎င်း Page တွင် ရှာဖွေနေသော Grid ID မရှိပါက ဆက်မလုပ်ဘဲ ရပ်မည်
     if (!gridContainer) return; 
 
     const SHEET_ID = '1z91vQGTeCvj6iYYZP4i9ANBn7x0dd54tb9tFgthisxc'; 
-    const SHEET_TITLE = 'Sheet1'; 
-    const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_TITLE}`;
+    const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${sheetTitle}`;
 
     try {
         const response = await fetch(SHEET_URL);
         if (!response.ok) throw new Error('Network response was not ok');
         
         const sheetData = await response.text(); 
-        
-        // 💡 ဒေတာတွေ ရောက်/မရောက် Console မှာ စာသားထုတ်ကြည့်မယ်
-        console.log("=== Google Sheet Data ===");
-        console.log(sheetData);
-        console.log("=========================");
-        
-        // စာကြောင်းများကို ခွဲထုတ်ခြင်း (Windows ရော Mac ပါ အဆင်ပြေအောင် \r\n ကော \n ပါ စစ်ပါမယ်)
         const rows = sheetData.split(/\r?\n/).slice(1); 
         gridContainer.innerHTML = ''; 
 
         let hasProducts = false;
 
         rows.forEach(row => {
-            // CSV parsing အတွက် ပိုမိုစိတ်ချရသော ပုံစံပြောင်းလဲခြင်း
             const columns = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
             if (columns.length < 4) return; 
 
@@ -67,9 +60,7 @@ async function fetchGroceryProducts() {
             const price = columns[2].replace(/"/g, '').trim();
             const image = columns[3].replace(/"/g, '').trim();
 
-            // အကယ်၍ အချက်အလက်အလွတ်ဖြစ်နေလျှင် ကျော်မည်
             if (!title || !price) return;
-
             hasProducts = true;
 
             const productCard = `
@@ -88,7 +79,7 @@ async function fetchGroceryProducts() {
         });
 
         if (!hasProducts) {
-            gridContainer.innerHTML = '<p style="text-align:center; width:100%;">Google Sheet ထဲတွင် ပစ္စည်းများ ရှာမတွေ့ပါ။ ခေါင်းစဉ်များကို စစ်ဆေးပါ။</p>';
+            gridContainer.innerHTML = '<p style="text-align:center; width:100%;">ပစ္စည်းများ ရှာမတွေ့ပါ။</p>';
         }
 
     } catch (error) {
@@ -97,5 +88,16 @@ async function fetchGroceryProducts() {
     }
 }
 
-// DomContentLoaded တည်ဆောက်မှု
-document.addEventListener('DOMContentLoaded', fetchGroceryProducts);
+// ==========================================
+// ၄။ Page အလိုက် သက်ဆိုင်ရာ Sheet Tab ကို လှမ်းခေါ်ခြင်း
+// ==========================================
+function initApp() {
+    // grocery.html အတွက် -> 'grocery-grid' ID ထဲကို 'Sheet1' ထဲက ဒေတာတွေ ထည့်မယ်
+    fetchProductsFromSheet('grocery-grid', 'Sheet1');
+
+    // electronics.html အတွက် -> 'electronics-grid' ID ထဲကို 'Electronics' Tab ထဲက ဒေတာတွေ ထည့်မယ်
+    fetchProductsFromSheet('electronics-grid', 'Electronics');
+}
+
+// Page ပွင့်လာတာနဲ့ စတင်အလုပ်လုပ်ခိုင်းမည်
+document.addEventListener('DOMContentLoaded', initApp);
